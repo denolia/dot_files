@@ -94,6 +94,18 @@ get_sink_description() {
   esac
 }
 
+get_sink_short_id() {
+  local sink="$1"
+  case "$BACKEND" in
+    pactl)
+      pactl list short sinks | awk -v sink="$sink" '$2 == sink { print $1; exit }'
+      ;;
+    wpctl)
+      printf '%s\n' "$sink"
+      ;;
+  esac
+}
+
 set_default_sink() {
   local sink="$1"
   case "$BACKEND" in
@@ -124,13 +136,15 @@ print_status() {
     return
   fi
 
-  local description
+  local description short_id
   description="$(get_sink_description "$default_sink")"
   description="${description:-$default_sink}"
+  short_id="$(get_sink_short_id "$default_sink")"
+  short_id="${short_id:-$default_sink}"
 
   printf '{"text":"OUT %s","tooltip":"Default sink: %s"}\n' \
-    "$(json_escape "$description")" \
-    "$(json_escape "$default_sink")"
+    "$(json_escape "$short_id")" \
+    "$(json_escape "$description ($default_sink)")"
 }
 
 show_menu() {
