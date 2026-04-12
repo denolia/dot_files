@@ -1,6 +1,8 @@
-# Sway Config
+## About
 
-Personal Sway setup migrated from the previous Hyprland repo.
+Collection of configs and scripts for my setup
+
+Currently, uses Sway with configs and shortcuts migrated from my previous Hyprland setup.
 
 ## Files
 
@@ -41,4 +43,3 @@ Then either:
 - The config preserves the previous Hyprland shortcuts as closely as plain Sway allows.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
 - The Sway startup config exports the correct Wayland environment into user systemd so Waybar, portals, and GTK apps start without portal timeouts.
-- If Hyprland is no longer used on this machine, uninstalling `xdg-desktop-portal-hyprland` is recommended.
