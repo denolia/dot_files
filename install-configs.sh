@@ -14,6 +14,6 @@ install_file() {
   printf 'Installed %s -> %s\n' "$source" "$target"
 }
 
-install_file "$REPO_DIR/hyprland.conf" "$CONFIG_DIR/hypr/hyprland.conf" 644
+install_file "$REPO_DIR/sway.conf" "$CONFIG_DIR/sway/config" 644
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
 install_file "$REPO_DIR/scripts/audio-device.sh" "$CONFIG_DIR/waybar/scripts/audio-device.sh" 755

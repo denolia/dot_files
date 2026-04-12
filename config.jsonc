@@ -5,11 +5,11 @@
   "spacing": 6,
 
   "modules-left": [
-    "hyprland/workspaces"
+    "sway/workspaces"
   ],
 
   "modules-center": [
-    "hyprland/window"
+    "sway/window"
   ],
 
   "modules-right": [
@@ -18,26 +18,25 @@
     "network",
     "cpu",
     "memory",
-    "hyprland/language",
+    "sway/language",
     "clock",
     "tray"
   ],
 
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{name}"
   },
 
-  "hyprland/window": {
-    "format": "{}",
+  "sway/window": {
+    "format": "{title}",
     "max-length": 60
   },
 
-  "hyprland/language": {
-    "format": "{}",
-    "format-en": "EN",
-    "format-ru": "RU"
+  "sway/language": {
+    "format": "{shortDescription}",
+    "tooltip-format": "{long}"
   },
 
   "pulseaudio": {
