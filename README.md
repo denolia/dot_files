@@ -49,3 +49,7 @@ Then either:
   `xdg-desktop-portal-gtk` handles generic desktop portals used by GTK apps,
   and `xdg-desktop-portal-wlr` handles Wayland screenshot and screencast on Sway.
 - Shortcut reference: see `SWAY-CHEATSHEET.md`.
+- SwayFX can be installed side by side with distro Sway. In this setup:
+  plain Sway remains available as the `Sway` session,
+  and SwayFX is available as a separate `SwayFX` session.
+- Rolling back from SwayFX is simple: choose the normal `Sway` session again at login.

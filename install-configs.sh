@@ -17,6 +17,7 @@ install_file() {
 
 install_file "$REPO_DIR/sway.conf" "$CONFIG_DIR/sway/config" 644
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
+install_file "$REPO_DIR/style.css" "$CONFIG_DIR/waybar/style.css" 644
 install_file "$REPO_DIR/scripts/audio-device.sh" "$CONFIG_DIR/waybar/scripts/audio-device.sh" 755
 install_file "$REPO_DIR/xdg-desktop-portal/sway-portals.conf" "$CONFIG_DIR/xdg-desktop-portal/sway-portals.conf" 644
 

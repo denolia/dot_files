@@ -1,0 +1,116 @@
+@define-color bg rgba(15, 10, 29, 0.82);
+@define-color bg-strong rgba(23, 15, 44, 0.94);
+@define-color bg-soft rgba(31, 19, 56, 0.88);
+@define-color text #f8f1ff;
+@define-color text-dim #cbb8ea;
+@define-color pink #ff7ad9;
+@define-color blue #74eaff;
+@define-color purple #9f7bff;
+@define-color border rgba(159, 123, 255, 0.55);
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  min-height: 0;
+  border: none;
+  border-radius: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: @text;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#workspaces,
+#window,
+#custom-audio-device,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#language,
+#clock,
+#tray {
+  margin: 4px 0px;
+  padding: 0 12px;
+  min-height: 34px;
+  color: @text;
+  background: @bg;
+  /*border: 1px solid @border;*/
+  border-radius: 8px;
+  /*box-shadow: 0 0 4px rgba(255, 122, 217, 0.16);*/
+}
+
+#window {
+  /*padding: 0 16px;*/
+  color: #ffeefe;
+  /*background: rgba(20, 12, 38, 0.88);*/
+  /*border-color: rgba(116, 234, 255, 0.45);*/
+  /*box-shadow: 0 0 18px rgba(116, 234, 255, 0.12);*/
+}
+
+#workspaces {
+  padding: 0 6px;
+  /*background: rgba(20, 12, 38, 0.9);*/
+}
+
+#workspaces button {
+  padding: 0 10px;
+  margin: 5px 4px;
+  color: @text-dim;
+  background: transparent;
+  border-radius: 12px;
+  transition: none;
+}
+
+#workspaces button:hover {
+  color: @text;
+  background: rgba(116, 234, 255, 0.14);
+  box-shadow: inherit;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: #140c22;
+  background: linear-gradient(to right, @pink 0%, @blue 100%);
+}
+
+#workspaces button.urgent {
+  color: @text;
+  background: linear-gradient(to right, @pink 0%, @purple 100%);
+}
+
+#custom-audio-device,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#language,
+#clock {
+  background: @bg-soft;
+}
+
+#clock {
+  /*padding: 0 12px;*/
+  color: rgba(255, 122, 217, 0.7);
+  margin-right: 10px;
+  /*box-shadow: 0 0 18px rgba(159, 123, 255, 0.18);*/
+}
+
+#tray {
+  /*margin: 0 14px;*/
+}
+
+tooltip {
+  background: @bg-strong;
+  color: @text;
+  /*border: 1px solid rgba(116, 234, 255, 0.45);*/
+  border-radius: 12px;
+}
