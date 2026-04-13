@@ -30,7 +30,8 @@ This cheat sheet matches the current config in this repo.
 ### Layout and Windows
 
 - `Super+V`: toggle focused window between tiled and floating
-- `Super+J`: toggle split layout
+- `Super+J`: split focused window opposite to its parent for the next tiled window
+- `Super+Shift+J`: toggle the focused container between horizontal and vertical split
 - `Super+P`: no-op placeholder for Hyprland pseudotile
 
 ### Focus Movement
