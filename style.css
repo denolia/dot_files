@@ -20,6 +20,8 @@
 window#waybar {
   background: transparent;
   color: @text;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 window#waybar.empty #window {
@@ -43,6 +45,7 @@ window#waybar.empty #window {
   min-height: 34px;
   color: @text;
   background: @bg;
+  background-clip: padding-box;
   /*border: 1px solid @border;*/
   border-radius: 8px;
   /*box-shadow: 0 0 4px rgba(255, 122, 217, 0.16);*/
