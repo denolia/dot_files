@@ -7,6 +7,8 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 ## Files
 
 - `sway.conf`: main Sway config, installed as `~/.config/sway/config`
+- `alacritty/alacritty.toml`: Alacritty config, installed as `~/.config/alacritty/alacritty.toml`
+- `alacritty/themes/cyber_punk_neon.toml`: imported Alacritty theme, installed as `~/.config/alacritty/themes/cyber_punk_neon.toml`
 - `config.jsonc`: Waybar config
 - `scripts/audio-device.sh`: Waybar helper for switching audio outputs
 - `scripts/power-menu.sh`: Waybar helper for the power menu
@@ -45,6 +47,7 @@ Then either:
 ## Notes
 
 - The config preserves the previous Hyprland shortcuts as closely as plain Sway allows.
+- The repo now owns the active Alacritty TOML config and the currently selected imported theme. The old `~/.config/alacritty/alacritty.yml` is a legacy leftover and is not installed from this repo.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
 - The Sway startup config exports the live compositor environment into user systemd and D-Bus once per session so portals and other activated helpers start with the right Wayland context.

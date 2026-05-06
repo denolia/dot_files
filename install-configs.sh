@@ -17,6 +17,8 @@ install_file() {
 
 install_file "$REPO_DIR/sway.conf" "$CONFIG_DIR/sway/config" 644
 install_file "$REPO_DIR/scripts/sway-session-init.sh" "$CONFIG_DIR/sway/scripts/session-init.sh" 755
+install_file "$REPO_DIR/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml" 644
+install_file "$REPO_DIR/alacritty/themes/cyber_punk_neon.toml" "$CONFIG_DIR/alacritty/themes/cyber_punk_neon.toml" 644
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
 install_file "$REPO_DIR/style.css" "$CONFIG_DIR/waybar/style.css" 644
 install_file "$REPO_DIR/scripts/audio-device.sh" "$CONFIG_DIR/waybar/scripts/audio-device.sh" 755
