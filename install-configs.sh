@@ -55,3 +55,9 @@ if [[ -f "$APPLICATIONS_DIR/webstorm.desktop" ]]; then
   rm -f "$APPLICATIONS_DIR/webstorm.desktop"
   printf 'Removed %s\n' "$APPLICATIONS_DIR/webstorm.desktop"
 fi
+
+ROFI_DRUN_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/rofi3.druncache"
+if [[ -f "$ROFI_DRUN_CACHE" ]] && grep -q ' webstorm\.desktop$' "$ROFI_DRUN_CACHE"; then
+  sed -i '/ webstorm\.desktop$/d' "$ROFI_DRUN_CACHE"
+  printf 'Removed stale webstorm.desktop entry from %s\n' "$ROFI_DRUN_CACHE"
+fi
