@@ -1,34 +1,9 @@
+[general]
 import = [
-    "~/.config/alacritty/themes/cyber_punk_neon.toml"
+    "themes/cyber_punk_neon.toml",
+    "appearance.toml",
+    "behavior.toml",
+    "bindings.toml",
 ]
-
-[font]
-size = 11
-
-[font.normal]
-family = "JetBrains Mono"
-style = "Regular"
-
-[font.bold]
-family = "JetBrains Mono"
-style = "Bold"
-
-[font.italic]
-family = "JetBrains Mono"
-style = "Italic"
-
-[scrolling]
-history = 10000
-multiplier = 3
-
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
-
-[window.padding]
-x = 10
-y = 20
-
-[window]
-opacity = 0.9
-# decorations = "None"
+live_config_reload = true
+ipc_socket = true

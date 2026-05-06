@@ -1,0 +1,7 @@
+[keyboard]
+bindings = [
+    { key = "Return", mods = "Control|Shift", action = "CreateNewWindow" },
+    { key = "Return", mods = "Alt", action = "ToggleFullscreen" },
+    { key = "L", mods = "Control|Shift", action = "ClearHistory" },
+    { key = "U", mods = "Control|Shift", mode = "Vi|~Search", action = "ClearSelection" },
+]
