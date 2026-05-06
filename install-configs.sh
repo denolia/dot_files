@@ -20,6 +20,7 @@ install_file "$REPO_DIR/scripts/sway-session-init.sh" "$CONFIG_DIR/sway/scripts/
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
 install_file "$REPO_DIR/style.css" "$CONFIG_DIR/waybar/style.css" 644
 install_file "$REPO_DIR/scripts/audio-device.sh" "$CONFIG_DIR/waybar/scripts/audio-device.sh" 755
+install_file "$REPO_DIR/scripts/power-menu.sh" "$CONFIG_DIR/waybar/scripts/power-menu.sh" 755
 install_file "$REPO_DIR/xdg-desktop-portal/sway-portals.conf" "$CONFIG_DIR/xdg-desktop-portal/sway-portals.conf" 644
 
 if [[ -f "$APPLICATIONS_DIR/webstorm.desktop" ]]; then

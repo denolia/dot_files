@@ -13,14 +13,15 @@
   ],
 
   "modules-right": [
-    "custom/audio-device",
+    "tray",
     "pulseaudio",
+    "custom/audio-device",
     "network",
     "cpu",
     "memory",
     "sway/language",
     "clock",
-    "tray"
+    "custom/power"
   ],
 
   "sway/workspaces": {
@@ -71,6 +72,12 @@
     "format": "{:%H:%M  %d.%m.%Y}"
   },
 
+  "custom/power": {
+    "exec": "~/.config/waybar/scripts/power-menu.sh status",
+    "return-type": "json",
+    "interval": 3600,
+    "on-click": "~/.config/waybar/scripts/power-menu.sh menu"
+  },
   "tray": {
     "spacing": 10
   }

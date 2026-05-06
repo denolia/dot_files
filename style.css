@@ -39,6 +39,7 @@ window#waybar.empty #window {
 #memory,
 #language,
 #clock,
+#custom-power,
 #tray {
   margin: 4px 0px;
   padding: 0 12px;
@@ -69,7 +70,7 @@ window#waybar.empty #window {
   margin: 5px 4px;
   color: @text-dim;
   background: transparent;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: none;
 }
 
@@ -96,7 +97,8 @@ window#waybar.empty #window {
 #cpu,
 #memory,
 #language,
-#clock {
+#clock,
+#custom-power {
   background: @bg-soft;
 }
 
@@ -107,6 +109,16 @@ window#waybar.empty #window {
   /*box-shadow: 0 0 18px rgba(159, 123, 255, 0.18);*/
 }
 
+#custom-power {
+  color: #140c22;
+  margin-right: 10px;
+  background: linear-gradient(to right, @pink 0%, @blue 100%);
+}
+
+#custom-power:hover {
+  background: linear-gradient(to right, #ff8ee0 0%, #8df1ff 100%);
+}
+
 #tray {
   /*margin: 0 14px;*/
 }
@@ -115,5 +127,5 @@ tooltip {
   background: @bg-strong;
   color: @text;
   /*border: 1px solid rgba(116, 234, 255, 0.45);*/
-  border-radius: 12px;
+  border-radius: 8px;
 }
