@@ -22,6 +22,7 @@ install_file "$REPO_DIR/alacritty/themes/cyber_punk_neon.toml" "$CONFIG_DIR/alac
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
 install_file "$REPO_DIR/style.css" "$CONFIG_DIR/waybar/style.css" 644
 install_file "$REPO_DIR/scripts/audio-device.sh" "$CONFIG_DIR/waybar/scripts/audio-device.sh" 755
+install_file "$REPO_DIR/scripts/calendar-popup.sh" "$CONFIG_DIR/waybar/scripts/calendar-popup.sh" 755
 install_file "$REPO_DIR/scripts/power-menu.sh" "$CONFIG_DIR/waybar/scripts/power-menu.sh" 755
 install_file "$REPO_DIR/xdg-desktop-portal/sway-portals.conf" "$CONFIG_DIR/xdg-desktop-portal/sway-portals.conf" 644
 

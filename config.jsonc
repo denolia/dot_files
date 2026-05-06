@@ -70,6 +70,7 @@
 
   "clock": {
     "format": "{:%H:%M  %d.%m.%Y}",
+    "on-click": "~/.config/waybar/scripts/calendar-popup.sh toggle",
     "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "month",
