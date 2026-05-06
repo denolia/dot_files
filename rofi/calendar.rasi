@@ -1,0 +1,66 @@
+@import "neon"
+
+window {
+  width: 330px;
+  background-color: @bg-strong;
+}
+
+mainbox {
+  padding: 14px;
+  spacing: 12px;
+}
+
+inputbar {
+  enabled: false;
+}
+
+entry {
+  enabled: false;
+}
+
+case-indicator {
+  enabled: false;
+}
+
+listview {
+  lines: 1;
+  columns: 3;
+  fixed-height: true;
+  spacing: 8px;
+}
+
+element {
+  padding: 8px 6px;
+  children: [ element-text ];
+  background-color: @bg-soft;
+}
+
+element normal.normal {
+  background-color: @bg-soft;
+  text-color: @text-dim;
+}
+
+element-text {
+  expand: true;
+  font: "JetBrains Mono 13";
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+}
+
+element selected.normal {
+  background-color: @pink;
+  text-color: #140c22;
+}
+
+message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  background-color: @bg;
+}
+
+textbox {
+  font: "JetBrains Mono 13";
+  horizontal-align: 0.5;
+  background-color: transparent;
+  text-color: @text;
+}

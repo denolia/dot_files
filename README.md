@@ -17,6 +17,7 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 - `config.jsonc`: Waybar config
 - `rofi/config.rasi`: rofi launcher behavior
 - `rofi/neon.rasi`: rofi theme matching the SwayFX and Waybar colors
+- `rofi/calendar.rasi`: rofi theme overrides for the Waybar clock popup
 - `scripts/audio-device.sh`: Waybar helper for switching audio outputs
 - `scripts/calendar-popup.sh`: Waybar helper for a clickable clock calendar popup
 - `scripts/power-menu.sh`: Waybar helper for the power menu
@@ -40,7 +41,6 @@ Then either:
 - `sway`
 - `waybar`
 - `rofi`
-- `zenity`
 - `alacritty`
 - `zsh`
 - `starship`
@@ -63,7 +63,7 @@ Then either:
 - The Alacritty config is intentionally modular so visuals, behavior, bindings, and theme can be adjusted independently.
 - The Zsh prompt uses Starship's pastel powerline preset when `starship` is installed. The preset expects a Nerd Font in the terminal.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
-- Left-clicking the Waybar clock opens a persistent `zenity` calendar popup, while hover still shows the inline calendar tooltip.
+- Left-clicking the Waybar clock opens a persistent `rofi` calendar popup, while hover still shows the inline calendar tooltip.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
 - The Sway startup config exports the live compositor environment into user systemd and D-Bus once per session so portals and other activated helpers start with the right Wayland context.
 - `bindsym XF86PowerOff exec systemctl suspend` handles keyboard power keys seen by Sway. The actual chassis power button on a desktop is usually handled by `systemd-logind` instead.

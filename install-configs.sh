@@ -28,6 +28,7 @@ install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
 install_file "$REPO_DIR/style.css" "$CONFIG_DIR/waybar/style.css" 644
 install_file "$REPO_DIR/rofi/config.rasi" "$CONFIG_DIR/rofi/config.rasi" 644
 install_file "$REPO_DIR/rofi/neon.rasi" "$CONFIG_DIR/rofi/neon.rasi" 644
+install_file "$REPO_DIR/rofi/calendar.rasi" "$CONFIG_DIR/rofi/calendar.rasi" 644
 install_file "$REPO_DIR/scripts/audio-device.sh" "$CONFIG_DIR/waybar/scripts/audio-device.sh" 755
 install_file "$REPO_DIR/scripts/calendar-popup.sh" "$CONFIG_DIR/waybar/scripts/calendar-popup.sh" 755
 install_file "$REPO_DIR/scripts/power-menu.sh" "$CONFIG_DIR/waybar/scripts/power-menu.sh" 755
