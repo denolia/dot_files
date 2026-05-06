@@ -1,0 +1,135 @@
+* {
+  bg: rgba(15, 10, 29, 82%);
+  bg-strong: rgba(23, 15, 44, 94%);
+  bg-soft: rgba(31, 19, 56, 88%);
+  text: #f8f1ff;
+  text-dim: #cbb8ea;
+  pink: #ff7ad9;
+  blue: #74eaff;
+  purple: #9f7bff;
+
+  font: "JetBrainsMono Nerd Font 13";
+  background-color: transparent;
+  text-color: @text;
+}
+
+window {
+  width: 42%;
+  location: center;
+  anchor: center;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background-color: @bg;
+}
+
+mainbox {
+  padding: 12px;
+  spacing: 10px;
+  background-color: transparent;
+}
+
+inputbar {
+  padding: 10px 12px;
+  spacing: 10px;
+  border-radius: 8px;
+  background-color: @bg-soft;
+  text-color: @text;
+}
+
+prompt {
+  background-color: transparent;
+  text-color: @pink;
+}
+
+entry {
+  background-color: transparent;
+  placeholder: "Search";
+  placeholder-color: @text-dim;
+  text-color: @text;
+}
+
+case-indicator {
+  background-color: transparent;
+  text-color: @text-dim;
+}
+
+mode-switcher {
+  spacing: 6px;
+  background-color: transparent;
+}
+
+button {
+  padding: 7px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  text-color: @text-dim;
+}
+
+button selected {
+  background-color: @pink;
+  text-color: #140c22;
+}
+
+listview {
+  lines: 8;
+  columns: 1;
+  fixed-height: false;
+  spacing: 6px;
+  background-color: transparent;
+}
+
+element {
+  padding: 8px 10px;
+  spacing: 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  text-color: @text-dim;
+}
+
+element normal.normal {
+  background-color: transparent;
+  text-color: @text-dim;
+}
+
+element selected.normal,
+element selected.active {
+  background-color: @pink;
+  text-color: #140c22;
+}
+
+element active.normal,
+element normal.active {
+  background-color: @bg-soft;
+  text-color: @blue;
+}
+
+element urgent.normal,
+element normal.urgent,
+element selected.urgent {
+  background-color: @purple;
+  text-color: @text;
+}
+
+element-icon {
+  size: 24px;
+  background-color: transparent;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+message {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: @bg-strong;
+  text-color: @text;
+}
+
+textbox {
+  background-color: transparent;
+  text-color: @text;
+}

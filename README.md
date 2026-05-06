@@ -15,6 +15,8 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 - `zsh/zshrc`: interactive Zsh config, installed as `~/.zshrc`
 - `starship.toml`: Starship pastel powerline prompt, installed as `~/.config/starship.toml`
 - `config.jsonc`: Waybar config
+- `rofi/config.rasi`: rofi launcher behavior
+- `rofi/neon.rasi`: rofi theme matching the SwayFX and Waybar colors
 - `scripts/audio-device.sh`: Waybar helper for switching audio outputs
 - `scripts/calendar-popup.sh`: Waybar helper for a clickable clock calendar popup
 - `scripts/power-menu.sh`: Waybar helper for the power menu
