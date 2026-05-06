@@ -59,7 +59,7 @@ Then either:
 ## Notes
 
 - The config preserves the previous Hyprland shortcuts as closely as plain Sway allows.
-- The repo now owns the active Alacritty TOML config and the currently selected imported theme. The old `~/.config/alacritty/alacritty.yml` is a legacy leftover and is not installed from this repo.
+- The repo owns the active Alacritty TOML config and the currently selected imported theme. The installer removes stale legacy Alacritty YAML and unused theme-collection files.
 - The Alacritty config is intentionally modular so visuals, behavior, bindings, and theme can be adjusted independently.
 - The Zsh prompt uses Starship's pastel powerline preset when `starship` is installed. The preset expects a Nerd Font in the terminal.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.

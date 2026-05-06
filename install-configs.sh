@@ -15,6 +15,15 @@ install_file() {
   printf 'Installed %s -> %s\n' "$source" "$target"
 }
 
+remove_path() {
+  local target="$1"
+
+  if [[ -e "$target" || -L "$target" ]]; then
+    rm -rf "$target"
+    printf 'Removed %s\n' "$target"
+  fi
+}
+
 install_file "$REPO_DIR/sway.conf" "$CONFIG_DIR/sway/config" 644
 install_file "$REPO_DIR/scripts/sway-session-init.sh" "$CONFIG_DIR/sway/scripts/session-init.sh" 755
 install_file "$REPO_DIR/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml" 644
@@ -22,6 +31,14 @@ install_file "$REPO_DIR/alacritty/appearance.toml" "$CONFIG_DIR/alacritty/appear
 install_file "$REPO_DIR/alacritty/behavior.toml" "$CONFIG_DIR/alacritty/behavior.toml" 644
 install_file "$REPO_DIR/alacritty/bindings.toml" "$CONFIG_DIR/alacritty/bindings.toml" 644
 install_file "$REPO_DIR/alacritty/themes/catppuccin_macchiato.toml" "$CONFIG_DIR/alacritty/themes/catppuccin_macchiato.toml" 644
+remove_path "$CONFIG_DIR/alacritty/alacritty.yml"
+remove_path "$CONFIG_DIR/alacritty/themes/cyber_punk_neon.toml"
+remove_path "$CONFIG_DIR/alacritty/themes/LICENSE"
+remove_path "$CONFIG_DIR/alacritty/themes/README.md"
+remove_path "$CONFIG_DIR/alacritty/themes/print_colors.sh"
+remove_path "$CONFIG_DIR/alacritty/themes/themes"
+remove_path "$CONFIG_DIR/alacritty/themes/images"
+remove_path "$CONFIG_DIR/alacritty/themes/.git"
 install_file "$REPO_DIR/zsh/zshrc" "$HOME/.zshrc" 644
 install_file "$REPO_DIR/starship.toml" "$CONFIG_DIR/starship.toml" 644
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
