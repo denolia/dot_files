@@ -33,31 +33,3 @@ unfocused_hollow = true
 blink_interval = 650
 blink_timeout = 0
 thickness = 0.2
-
-[colors.selection]
-text = "CellBackground"
-background = "#0abdc6"
-
-[colors.search.matches]
-foreground = "#000b1e"
-background = "#711c91"
-
-[colors.search.focused_match]
-foreground = "#000b1e"
-background = "#0abdc6"
-
-[colors.hints.start]
-foreground = "#000b1e"
-background = "#f57800"
-
-[colors.hints.end]
-foreground = "#000b1e"
-background = "#d300c4"
-
-[colors.footer_bar]
-foreground = "#000b1e"
-background = "#0abdc6"
-
-[colors.vi_mode_cursor]
-text = "#000b1e"
-cursor = "#f57800"

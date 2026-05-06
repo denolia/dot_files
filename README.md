@@ -8,10 +8,10 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 
 - `sway.conf`: main Sway config, installed as `~/.config/sway/config`
 - `alacritty/alacritty.toml`: Alacritty config, installed as `~/.config/alacritty/alacritty.toml`
-- `alacritty/appearance.toml`: visual Alacritty settings and accent colors
+- `alacritty/appearance.toml`: visual Alacritty settings
 - `alacritty/behavior.toml`: scrollback, clipboard, mouse, terminal, and hints behavior
 - `alacritty/bindings.toml`: Alacritty keybindings
-- `alacritty/themes/cyber_punk_neon.toml`: imported Alacritty theme, installed as `~/.config/alacritty/themes/cyber_punk_neon.toml`
+- `alacritty/themes/catppuccin_macchiato.toml`: imported Alacritty theme, installed as `~/.config/alacritty/themes/catppuccin_macchiato.toml`
 - `zsh/zshrc`: interactive Zsh config, installed as `~/.zshrc`
 - `starship.toml`: Starship pastel powerline prompt, installed as `~/.config/starship.toml`
 - `config.jsonc`: Waybar config

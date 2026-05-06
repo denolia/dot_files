@@ -1,6 +1,6 @@
 [general]
 import = [
-    "themes/cyber_punk_neon.toml",
+    "themes/catppuccin_macchiato.toml",
     "appearance.toml",
     "behavior.toml",
     "bindings.toml",

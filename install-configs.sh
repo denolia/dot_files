@@ -21,7 +21,7 @@ install_file "$REPO_DIR/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacrit
 install_file "$REPO_DIR/alacritty/appearance.toml" "$CONFIG_DIR/alacritty/appearance.toml" 644
 install_file "$REPO_DIR/alacritty/behavior.toml" "$CONFIG_DIR/alacritty/behavior.toml" 644
 install_file "$REPO_DIR/alacritty/bindings.toml" "$CONFIG_DIR/alacritty/bindings.toml" 644
-install_file "$REPO_DIR/alacritty/themes/cyber_punk_neon.toml" "$CONFIG_DIR/alacritty/themes/cyber_punk_neon.toml" 644
+install_file "$REPO_DIR/alacritty/themes/catppuccin_macchiato.toml" "$CONFIG_DIR/alacritty/themes/catppuccin_macchiato.toml" 644
 install_file "$REPO_DIR/zsh/zshrc" "$HOME/.zshrc" 644
 install_file "$REPO_DIR/starship.toml" "$CONFIG_DIR/starship.toml" 644
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
