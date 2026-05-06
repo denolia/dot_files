@@ -1,0 +1,108 @@
+# ~/.zshrc: executed by zsh(1) for interactive shells.
+
+# If not running interactively, don't do anything.
+case $- in
+  *i*) ;;
+  *) return ;;
+esac
+
+# History
+HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=2000
+setopt append_history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt share_history
+
+# Useful completion defaults.
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# Make less more friendly for non-text input files, see lesspipe(1).
+if [[ -x /usr/bin/lesspipe ]]; then
+  eval "$(SHELL=/bin/sh lesspipe)"
+fi
+
+# Set variable identifying the chroot you work in.
+if [[ -z "${debian_chroot:-}" && -r /etc/debian_chroot ]]; then
+  debian_chroot="$(</etc/debian_chroot)"
+fi
+
+# Prompt.
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+else
+  autoload -Uz colors
+  colors
+
+  case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes ;;
+  esac
+
+  if [[ -n "${force_color_prompt:-}" ]]; then
+    if [[ -x /usr/bin/tput ]] && tput setaf 1 >/dev/null 2>&1; then
+      color_prompt=yes
+    else
+      color_prompt=
+    fi
+  fi
+
+  if [[ "${color_prompt:-}" == yes ]]; then
+    PROMPT='${debian_chroot:+($debian_chroot)}%F{green}%n@%m%f:%F{blue}%~%f%# '
+  else
+    PROMPT='${debian_chroot:+($debian_chroot)}%n@%m:%~%# '
+  fi
+fi
+
+case "$TERM" in
+  xterm*|rxvt*) precmd() { print -Pn "\e]0;${debian_chroot:+($debian_chroot)}%n@%m: %~\a" } ;;
+esac
+
+unset color_prompt force_color_prompt
+
+# Enable color support of ls and related commands.
+if [[ -x /usr/bin/dircolors ]]; then
+  if [[ -r "$HOME/.dircolors" ]]; then
+    eval "$(dircolors -b "$HOME/.dircolors")"
+  else
+    eval "$(dircolors -b)"
+  fi
+
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+
+# Some more ls aliases.
+alias lt='lsd --tree'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias l='lsd -l'
+
+# Add an alert alias for long-running commands. Use like so: sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([[ $? = 0 ]] && echo terminal || echo error)" "$(fc -ln -1 | sed -e '\''s/[;&|[:space:]]*alert$//'\'')"'
+
+# Optional zsh-specific alias file.
+if [[ -f "$HOME/.zsh_aliases" ]]; then
+  source "$HOME/.zsh_aliases"
+fi
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+if [[ -s "$NVM_DIR/bash_completion" ]]; then
+  autoload -Uz bashcompinit
+  bashcompinit
+  source "$NVM_DIR/bash_completion"
+fi
+
+# Add local bin to path.
+export PATH="$HOME/.local/bin:$HOME/bin:$PATH"

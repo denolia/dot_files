@@ -12,6 +12,8 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 - `alacritty/behavior.toml`: scrollback, clipboard, mouse, terminal, and hints behavior
 - `alacritty/bindings.toml`: Alacritty keybindings
 - `alacritty/themes/cyber_punk_neon.toml`: imported Alacritty theme, installed as `~/.config/alacritty/themes/cyber_punk_neon.toml`
+- `zsh/zshrc`: interactive Zsh config, installed as `~/.zshrc`
+- `starship.toml`: Starship pastel powerline prompt, installed as `~/.config/starship.toml`
 - `config.jsonc`: Waybar config
 - `scripts/audio-device.sh`: Waybar helper for switching audio outputs
 - `scripts/calendar-popup.sh`: Waybar helper for a clickable clock calendar popup
@@ -38,6 +40,9 @@ Then either:
 - `rofi`
 - `zenity`
 - `alacritty`
+- `zsh`
+- `starship`
+- `lsd`
 - `nautilus`
 - `grim`
 - `slurp`
@@ -54,6 +59,7 @@ Then either:
 - The config preserves the previous Hyprland shortcuts as closely as plain Sway allows.
 - The repo now owns the active Alacritty TOML config and the currently selected imported theme. The old `~/.config/alacritty/alacritty.yml` is a legacy leftover and is not installed from this repo.
 - The Alacritty config is intentionally modular so visuals, behavior, bindings, and theme can be adjusted independently.
+- The Zsh prompt uses Starship's pastel powerline preset when `starship` is installed. The preset expects a Nerd Font in the terminal.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
 - Left-clicking the Waybar clock opens a persistent `zenity` calendar popup, while hover still shows the inline calendar tooltip.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
