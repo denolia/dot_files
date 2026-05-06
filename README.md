@@ -45,7 +45,7 @@ Then either:
 ## Notes
 
 - The config preserves the previous Hyprland shortcuts as closely as plain Sway allows.
-- `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Power off`, and `Log out`.
+- `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
 - The Sway startup config exports the live compositor environment into user systemd and D-Bus once per session so portals and other activated helpers start with the right Wayland context.
 - `bindsym XF86PowerOff exec systemctl suspend` handles keyboard power keys seen by Sway. The actual chassis power button on a desktop is usually handled by `systemd-logind` instead.

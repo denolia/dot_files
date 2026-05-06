@@ -69,26 +69,36 @@ window#waybar.empty #window {
   padding: 0 10px;
   margin: 5px 4px;
   color: @text-dim;
-  background: transparent;
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(255, 122, 217, 0.13) 0%, rgba(116, 234, 255, 0.13) 100%);
+  background-size: 180% 100%;
+  background-position: 100% 50%;
   border-radius: 8px;
-  transition: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 180ms ease-out;
 }
 
 #workspaces button:hover {
   color: @text;
-  background: rgba(116, 234, 255, 0.14);
+  background-image: linear-gradient(to right, rgba(255, 122, 217, 0.27) 0%, rgba(116, 234, 255, 0.27) 100%);
+  background-position: 50% 50%;
   box-shadow: inherit;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
   color: #140c22;
-  background: linear-gradient(to right, @pink 0%, @blue 100%);
+  background-image: linear-gradient(to right, @pink 0%, @blue 100%);
+  background-size: 100% 100%;
+  background-position: 0% 50%;
+  box-shadow: 0 8px 20px rgba(116, 234, 255, 0.18);
 }
 
 #workspaces button.urgent {
   color: @text;
-  background: linear-gradient(to right, @pink 0%, @purple 100%);
+  background-image: linear-gradient(to right, @pink 0%, @purple 100%);
+  background-size: 100% 100%;
+  background-position: 0% 50%;
 }
 
 #custom-audio-device,
@@ -128,4 +138,9 @@ tooltip {
   color: @text;
   /*border: 1px solid rgba(116, 234, 255, 0.45);*/
   border-radius: 8px;
+  padding: 8px 10px;
+}
+
+tooltip label {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
 }

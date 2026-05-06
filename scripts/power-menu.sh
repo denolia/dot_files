@@ -10,13 +10,16 @@ show_menu() {
   local selection
 
   selection="$(
-    printf '%s\n' "Sleep" "Power off" "Log out" |
+    printf '%s\n' "Sleep" "Restart" "Power off" "Log out" |
       rofi -dmenu -i -p "Power"
   )" || exit 0
 
   case "$selection" in
     "Sleep")
       systemctl suspend
+      ;;
+    "Restart")
+      systemctl reboot
       ;;
     "Power off")
       systemctl poweroff
