@@ -26,6 +26,7 @@ remove_path() {
 
 install_file "$REPO_DIR/sway.conf" "$CONFIG_DIR/sway/config" 644
 install_file "$REPO_DIR/scripts/sway-session-init.sh" "$CONFIG_DIR/sway/scripts/session-init.sh" 755
+install_file "$REPO_DIR/scripts/wallpaper-rotate.sh" "$CONFIG_DIR/sway/scripts/wallpaper-rotate.sh" 755
 install_file "$REPO_DIR/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml" 644
 install_file "$REPO_DIR/alacritty/appearance.toml" "$CONFIG_DIR/alacritty/appearance.toml" 644
 install_file "$REPO_DIR/alacritty/behavior.toml" "$CONFIG_DIR/alacritty/behavior.toml" 644

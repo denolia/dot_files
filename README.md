@@ -21,6 +21,7 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 - `scripts/audio-device.sh`: Waybar helper for switching audio outputs
 - `scripts/calendar-popup.sh`: Waybar helper for a clickable clock calendar popup
 - `scripts/power-menu.sh`: Waybar helper for the power menu
+- `scripts/wallpaper-rotate.sh`: Sway wallpaper helper that fetches themed Wallhaven images into a local cache and rotates them with `swww`
 - `logind/power-button-suspend.conf`: optional `systemd-logind` drop-in to make the physical power button suspend
 - `xdg-desktop-portal/sway-portals.conf`: portal backend preferences for Sway
 - `SWAY-CHEATSHEET.md`: shortcut reference for the current Sway config
@@ -51,6 +52,11 @@ Then either:
 - `wl-clipboard`
 - `brightnessctl`
 - `playerctl`
+- `swww`
+- `curl`
+- `jq`
+- `flock`
+- `file`
 - `systemd`
 - `xdg-desktop-portal`
 - `xdg-desktop-portal-gtk`
@@ -62,6 +68,7 @@ Then either:
 - The repo owns the active Alacritty TOML config and the currently selected imported theme. The installer removes stale legacy Alacritty YAML and unused theme-collection files.
 - The Alacritty config is intentionally modular so visuals, behavior, bindings, and theme can be adjusted independently.
 - The Zsh prompt uses Starship's pastel powerline preset when `starship` is installed. The preset expects a Nerd Font in the terminal.
+- Wallpapers are fetched from Wallhaven with a SFW themed search, cached under `~/.local/share/wallpapers/wallhaven`, and rotated by `swww` every 30 minutes. Override defaults with `WALLPAPER_QUERY`, `WALLPAPER_INTERVAL_SECONDS`, `WALLPAPER_MIN_CACHE_COUNT`, `WALLPAPER_MAX_CACHE_COUNT`, `WALLPAPER_MINIMUM_RESOLUTION`, or `WALLPAPER_CACHE_DIR`.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
 - Left-clicking the Waybar clock opens a persistent `rofi` calendar popup, while hover still shows the inline calendar tooltip.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
