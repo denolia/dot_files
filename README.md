@@ -14,6 +14,7 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 - `alacritty/themes/catppuccin_macchiato.toml`: imported Alacritty theme, installed as `~/.config/alacritty/themes/catppuccin_macchiato.toml`
 - `zsh/zshrc`: interactive Zsh config, installed as `~/.zshrc`
 - `starship.toml`: Starship pastel powerline prompt, installed as `~/.config/starship.toml`
+- `XCompose`: custom compose sequences, installed as `~/.XCompose`
 - `config.jsonc`: Waybar config
 - `rofi/config.rasi`: rofi launcher behavior
 - `rofi/neon.rasi`: rofi theme matching the SwayFX and Waybar colors
@@ -73,6 +74,7 @@ Then either:
 - Left-clicking the Waybar clock opens a persistent `rofi` calendar popup, while hover still shows the inline calendar tooltip.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.
 - The Sway startup config exports the live compositor environment into user systemd and D-Bus once per session so portals and other activated helpers start with the right Wayland context.
+- Keyboard input uses Caps Lock to toggle between US/RU layouts and Right Alt as the compose key. Custom compose sequences live in the default `~/.XCompose` path.
 - `bindsym XF86PowerOff exec systemctl suspend` handles keyboard power keys seen by Sway. The actual chassis power button on a desktop is usually handled by `systemd-logind` instead.
 - To make the physical case power button suspend by default too, install the repo's drop-in with:
 

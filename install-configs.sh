@@ -42,6 +42,7 @@ remove_path "$CONFIG_DIR/alacritty/themes/images"
 remove_path "$CONFIG_DIR/alacritty/themes/.git"
 install_file "$REPO_DIR/zsh/zshrc" "$HOME/.zshrc" 644
 install_file "$REPO_DIR/starship.toml" "$CONFIG_DIR/starship.toml" 644
+install_file "$REPO_DIR/XCompose" "$HOME/.XCompose" 644
 install_file "$REPO_DIR/config.jsonc" "$CONFIG_DIR/waybar/config.jsonc" 644
 install_file "$REPO_DIR/style.css" "$CONFIG_DIR/waybar/style.css" 644
 install_file "$REPO_DIR/rofi/config.rasi" "$CONFIG_DIR/rofi/config.rasi" 644
