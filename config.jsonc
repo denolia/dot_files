@@ -16,6 +16,7 @@
     "tray",
     "pulseaudio",
     "custom/audio-device",
+    "custom/audio-input-device",
     "network",
     "cpu",
     "memory",
@@ -47,11 +48,19 @@
   },
 
   "custom/audio-device": {
-    "exec": "~/.config/waybar/scripts/audio-device.sh status",
+    "exec": "~/.config/waybar/scripts/audio-device.sh status output",
     "return-type": "json",
     "interval": 5,
     "signal": 8,
-    "on-click": "~/.config/waybar/scripts/audio-device.sh menu"
+    "on-click": "WAYBAR_SIGNAL=8 ~/.config/waybar/scripts/audio-device.sh menu output"
+  },
+
+  "custom/audio-input-device": {
+    "exec": "~/.config/waybar/scripts/audio-device.sh status input",
+    "return-type": "json",
+    "interval": 5,
+    "signal": 9,
+    "on-click": "WAYBAR_SIGNAL=9 ~/.config/waybar/scripts/audio-device.sh menu input"
   },
 
   "network": {

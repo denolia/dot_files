@@ -33,6 +33,7 @@ window#waybar.empty #window {
 #workspaces,
 #window,
 #custom-audio-device,
+#custom-audio-input-device,
 #pulseaudio,
 #network,
 #cpu,
@@ -102,6 +103,7 @@ window#waybar.empty #window {
 }
 
 #custom-audio-device,
+#custom-audio-input-device,
 #pulseaudio,
 #network,
 #cpu,
