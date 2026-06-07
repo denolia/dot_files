@@ -18,4 +18,4 @@ append_data_dir "${XDG_DATA_HOME:-$HOME/.local/share}/flatpak/exports/share"
 append_data_dir /var/lib/flatpak/exports/share
 
 export XDG_DATA_DIRS
-exec rofi -show drun "$@"
+exec rofi -show drun -i "$@"
