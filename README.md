@@ -19,6 +19,7 @@ Currently, uses Sway with configs and shortcuts migrated from my previous Hyprla
 - `rofi/config.rasi`: rofi launcher behavior
 - `rofi/neon.rasi`: rofi theme matching the SwayFX and Waybar colors
 - `rofi/calendar.rasi`: rofi theme overrides for the Waybar clock popup
+- `scripts/app-launcher.sh`: Sway app launcher wrapper that exposes Flatpak desktop entries to rofi
 - `scripts/audio-device.sh`: Waybar helper for switching audio outputs and inputs
 - `scripts/calendar-popup.sh`: Waybar helper for a clickable clock calendar popup
 - `scripts/power-menu.sh`: Waybar helper for the power menu
@@ -71,6 +72,7 @@ Then either:
 - The Zsh prompt uses Starship's pastel powerline preset when `starship` is installed. The preset expects a Nerd Font in the terminal.
 - Wallpapers are fetched from Wallhaven with a SFW themed search, cached under `~/.local/share/wallpapers/wallhaven`, and rotated by `swww` every 30 minutes. Override defaults with `WALLPAPER_QUERY`, `WALLPAPER_INTERVAL_SECONDS`, `WALLPAPER_MIN_CACHE_COUNT`, `WALLPAPER_MAX_CACHE_COUNT`, `WALLPAPER_MINIMUM_RESOLUTION`, or `WALLPAPER_CACHE_DIR`.
 - Waybar includes `OUT` and `IN` controls for switching the default audio output and microphone input through `rofi`.
+- `Super+R` opens rofi through a wrapper that adds user and system Flatpak export directories to `XDG_DATA_DIRS`, so Flatpak apps appear in the app launcher.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
 - Left-clicking the Waybar clock opens a persistent `rofi` calendar popup, while hover still shows the inline calendar tooltip.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.

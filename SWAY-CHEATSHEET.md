@@ -6,7 +6,7 @@ This cheat sheet matches the current config in this repo.
 
 - `Super+T`: open terminal
 - `Super+Q`: close focused window
-- `Super+R`: open app launcher (`rofi -show drun`)
+- `Super+R`: open app launcher (`rofi -show drun`, with Flatpak app exports visible)
 - `Super+E`: open file manager
 - `Super+V`: toggle focused window between tiled and floating
 - `Super` + left-drag: move a floating window
@@ -23,7 +23,7 @@ This cheat sheet matches the current config in this repo.
 
 - `Super+T`: open terminal
 - `Super+Q`: close focused window
-- `Super+R`: open app launcher (`rofi -show drun`)
+- `Super+R`: open app launcher (`rofi -show drun`, with Flatpak app exports visible)
 - `Super+E`: open file manager
 - `Super+M`: exit Sway session
 

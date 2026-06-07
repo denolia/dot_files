@@ -26,6 +26,7 @@ remove_path() {
 
 install_file "$REPO_DIR/sway.conf" "$CONFIG_DIR/sway/config" 644
 install_file "$REPO_DIR/scripts/sway-session-init.sh" "$CONFIG_DIR/sway/scripts/session-init.sh" 755
+install_file "$REPO_DIR/scripts/app-launcher.sh" "$CONFIG_DIR/sway/scripts/app-launcher.sh" 755
 install_file "$REPO_DIR/scripts/wallpaper-rotate.sh" "$CONFIG_DIR/sway/scripts/wallpaper-rotate.sh" 755
 install_file "$REPO_DIR/alacritty/alacritty.toml" "$CONFIG_DIR/alacritty/alacritty.toml" 644
 install_file "$REPO_DIR/alacritty/appearance.toml" "$CONFIG_DIR/alacritty/appearance.toml" 644
@@ -62,4 +63,9 @@ ROFI_DRUN_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/rofi3.druncache"
 if [[ -f "$ROFI_DRUN_CACHE" ]] && grep -q ' webstorm\.desktop$' "$ROFI_DRUN_CACHE"; then
   sed -i '/ webstorm\.desktop$/d' "$ROFI_DRUN_CACHE"
   printf 'Removed stale webstorm.desktop entry from %s\n' "$ROFI_DRUN_CACHE"
+fi
+
+if [[ -f "$ROFI_DRUN_CACHE" ]] && ! grep -q ' com\.prusa3d\.PrusaSlicer\.desktop$' "$ROFI_DRUN_CACHE"; then
+  rm -f "$ROFI_DRUN_CACHE"
+  printf 'Removed rofi drun cache so Flatpak application exports are refreshed\n'
 fi
