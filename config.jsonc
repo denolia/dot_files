@@ -38,7 +38,8 @@
 
   "sway/language": {
     "format": "{shortDescription}",
-    "tooltip-format": "{long}"
+    "tooltip-format": "{long}",
+    "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
   },
 
   "pulseaudio": {
