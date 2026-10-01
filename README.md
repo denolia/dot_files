@@ -66,6 +66,7 @@ Then either:
 
 ## Notes
 
+- The monitor layout lives in the `Monitors` section of `sway.conf`: Dell U2719DC `8DQMX13` (direct connection) is on the left and `GLWBRS2` (daisy-chained) is on the right, both at 2560×1440 with 1.2 scaling. Rules use make/model/serial rather than changing DisplayPort connector names, so they apply at login and reconnection. The right display starts at logical position `2133 0` (2560 / 1.2, rounded). After changing these rules, run `./install-configs.sh` and `swaymsg reload`.
 - The config preserves the previous Hyprland shortcuts as closely as plain Sway allows.
 - The repo owns the active Alacritty TOML config and the currently selected imported theme. The installer removes stale legacy Alacritty YAML and unused theme-collection files.
 - The Alacritty config is intentionally modular so visuals, behavior, bindings, and theme can be adjusted independently.
