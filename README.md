@@ -73,7 +73,7 @@ Then either:
 - The Zsh prompt uses Starship's pastel powerline preset when `starship` is installed. The preset expects a Nerd Font in the terminal.
 - Wallpapers are fetched from Wallhaven with a SFW themed search, cached under `~/.local/share/wallpapers/wallhaven`, and rotated by `swww` every 30 minutes. Override defaults with `WALLPAPER_QUERY`, `WALLPAPER_INTERVAL_SECONDS`, `WALLPAPER_MIN_CACHE_COUNT`, `WALLPAPER_MAX_CACHE_COUNT`, `WALLPAPER_MINIMUM_RESOLUTION`, or `WALLPAPER_CACHE_DIR`.
 - Waybar includes `OUT` and `IN` controls for switching the default audio output and microphone input through `rofi`.
-- `Super+R` opens rofi through a wrapper that adds user and system Flatpak export directories to `XDG_DATA_DIRS`, so Flatpak apps appear in the app launcher.
+- `Super+R` opens rofi through a wrapper that adds user and system Flatpak export directories to `XDG_DATA_DIRS`, so Flatpak apps appear in the app launcher. The wrapper uses a normal X11 window and a matching rule in `sway.conf` makes it float without a border and centers it on the current workspace, avoiding the unmanaged popup path. It replaces any existing rofi menu, so a stale launcher holding the pidfile lock cannot block subsequent presses.
 - `waybar` now includes a `PWR` button that opens a `rofi` menu with `Sleep`, `Restart`, `Power off`, and `Log out`.
 - Left-clicking the Waybar clock opens a persistent `rofi` calendar popup, while hover still shows the inline calendar tooltip.
 - Plain Sway does not provide Hyprland animations, blur, rounded corners, or dwindle pseudotiling.

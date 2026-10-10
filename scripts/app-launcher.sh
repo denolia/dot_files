@@ -18,4 +18,6 @@ append_data_dir "${XDG_DATA_HOME:-$HOME/.local/share}/flatpak/exports/share"
 append_data_dir /var/lib/flatpak/exports/share
 
 export XDG_DATA_DIRS
-exec rofi -show drun -i "$@"
+# Let Sway manage the X11 launcher instead of using an unmanaged popup.
+# Replace any existing menu so a stale instance cannot block another launch.
+exec rofi -show drun -i -normal-window -replace "$@"
